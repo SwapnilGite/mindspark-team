@@ -401,3 +401,39 @@ body {
     }
 
 }
+@media screen and (min-width: 1100px) and (max-width:1300px) {
+    .profile_card .profile_content h2 {
+        font-size: 26px;
+        padding: 10px;
+        width: 80%;
+        color: black;
+        background: #FBD341;
+        margin-top: 0;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .profile_card .profile_content h3 {
+        width: 80%;
+        color: grey;
+        font-size: 18px;
+        margin-top: 10px;
+        padding: 4px 10px;
+        background: #F1FFAB;
+        transform: translateX(-100%);
+        transition: all 0.30s linear 0s;
+        border-radius: 5px;
+    }
+
+    .profile_card .profile_content .social-link li a {
+        font-size: 20px;
+        color: black;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 20px;
+        margin-top: 5%;
+
+    }
+
+}
