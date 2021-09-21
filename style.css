@@ -1,20 +1,25 @@
 .scale-in-hor-center {
     -webkit-animation: scale-in-hor-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: scale-in-hor-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    font-size: 65px;color:  #08f3e6;font-family: Comic Sans MS;margin-top: 50px;letter-spacing: 2px;text-shadow: 5px 3px 4px rgba(62, 175, 255, 0.94);
+    font-size: 65px;
+    color: #08f3e6;
+    font-family: Comic Sans MS;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    text-shadow: 5px 3px 4px rgba(62, 175, 255, 0.94)
 }
 
 @-webkit-keyframes scale-in-hor-center {
     0% {
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
-        opacity: 1;
+        opacity: 1
     }
 
     100% {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
-        opacity: 1;
+        opacity: 1
     }
 
 }
@@ -23,29 +28,27 @@
     0% {
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
-        opacity: 1;
+        opacity: 1
     }
 
     100% {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
-        opacity: 1;
+        opacity: 1
     }
 
 }
 
 .profile_card {
     position: relative;
-    overflow: hidden;    /*margin-bottom: 10px;*/
-    border-width: 0 0 8px 8px;
-    border-style: solid;
-    border-color: #08f3e6;
+    overflow: hidden;
     margin-top: 15px;
     max-width: 100%;
     display: block;
-    border-radius: 20px;
+    border-radius: 0px;
     align-content: center;
     justify-content: center;
+    align-items: center;
     margin-bottom: 100px;
     transform-origin: center center 0px;
     transition: all 0.5s ease-out;
@@ -53,27 +56,62 @@
     animation-duration: 10s;
     animation-iteration-count: infinite;
     transform: perspective(2500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    z-index: 1;
     box-shadow: 10px 13px 19px 1px rgba(117, 106, 106, 0.75);
     -webkit-box-shadow: 10px 13px 19px 1px rgba(117, 106, 106, 0.75);
     -moz-box-shadow: 10px 13px 19px 1px rgba(117, 106, 106, 0.75);
     background-color: black;
     margin-left: 20px;
-    margin-right: 20px;
-
+    margin-right: 20px
 }
+
+.profile_card::before,
+.profile_card::after{
+  position: absolute;
+  content: "";
+  transition: all .75s;
+  z-index: -1;
+}
+
+.profile_card::before{
+  border-bottom: 15px solid #08f3e6;
+  border-left: 15px solid #08f3e6;
+  width: 10%;
+  height: 33%;
+  left: -10px;
+  bottom: -10px;
+}
+
+.profile_card::after{
+  border-top: 15px solid #08f3e6;
+  border-right: 15px solid #08f3e6;
+  width: 10%;
+  height: 33%;
+  top: -10px;
+  right: -10px;
+}
+
+.profile_card:hover::before{
+  width: 50%;
+  height: 50%;
+}
+
+.profile_card:hover::after{
+  width: 50%;
+  height: 50%;
+}
+
 
 .profile_card:hover {
     animation: unset;
     margin-top: 8vh;
-    transform: perspective(2500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: perspective(2500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
 }
 
 .profile_card  img {
     max-width: 100%;
     height: auto;
-    padding: 28px;
-    margin-top: 30px;
+    padding: 22px;
+    margin-top: 35px
 }
 
 .profile_card .profile_content {
@@ -81,50 +119,52 @@
     width: 100%;
     height: 100%;
     left: 0;
-    bottom: 0;    /*text-transform: capitalize;*/
+    bottom: 0
 }
 
 .profile_card .profile_content h2 {
     font-size: 30px;
     padding: 10px;
+    cursor: default;
     width: 80%;
-    color: black;
-    background: #FBD341;
+    color: #cccccc;
+    font-family: Perpetua;
+    background: #1A2980;
+    background: -webkit-linear-gradient(to left, #26D0CE, #1A2980);
+    background: linear-gradient(to left, #26D0CE, #1A2980);
     margin-top: 0;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: bold
 }
 
 .profile_card .profile_content h3 {
     width: 80%;
-    color: grey;
+    color: white;
     font-size: 20px;
     margin-top: 10px;
     padding: 4px 10px;
-    background: #F1FFAB;
+    background: #505248cf;
     transform: translateX(-100%);
     transition: all 0.30s linear 0s;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .profile_card:hover .profile_content h3 {
-    transform: translateX(0);
+    transform: translateX(0)
 }
 
 .profile_card:hover .profile_content h3:hover {
-    color: #150E56;
+    color: #3EDBF0
 }
 
 .profile_card .profile_content .social-link {
-
-    /*margin:4.8vh 0;*/
     padding: 0;
     transform: translateX(100%);
-    transition: all 0.50s linear 0s;
+    transition: all 0.50s linear 0s
 }
 
 .profile_card:hover .profile_content .social-link {
-    transform: translateX(0);
+    transform: translateX(0)
 }
 
 .profile_card .profile_content .social-link li {
@@ -133,7 +173,7 @@
     margin: 1px 5px;
     text-align: right;
     min-height: 5em;
-    vertical-align: middle;
+    vertical-align: middle
 }
 
 .profile_card .profile_content .social-link li a {
@@ -150,98 +190,86 @@
     border-radius: 30px;
     -webkit-transition: margin 0.5s ease-out;
     -moz-transition: margin 0.5s ease-out;
-    -o-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out
 }
 
 .profile_card .profile_content .social-link li a:hover {
     background: #888783db;
     text-decoration: none;
     margin-top: 6%;
+    cursor: pointer;
 }
 
 .text-center {
     color: white;
     font-weight: bold;
     font-size: 45px;
-    font-family: Gabriola;
+    font-family: Gabriola
 }
 
 body {
-
-    /* background-color: black !important;*/
-    background-image: url('background.jpg');
+    background: rgb(0, 13, 126);
+    background: radial-gradient(circle, rgba(0, 13, 126, 1) 3%, rgba(17, 20, 20, 1) 49%, rgba(18, 23, 27, 1) 84%);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    justify-content: space-between;
 }
 
-
-
-
-
-
-
-@media screen and (min-width: 220px) and (max-width:300px) {
-   
-    .scale-in-hor-center{
-        font-size: 45px;
+@media screen and (min-width:220px) and (max-width:300px) {
+    .scale-in-hor-center {
+        font-size: 45px
     }
+
     .profile_card .profile_content h2 {
         font-size: 19px;
         padding: 10px;
         width: 80%;
-        color: black;
-        background: #FBD341;
         margin-top: 0;
         border-radius: 5px;
-        font-weight: bold;
+        font-weight: bold
     }
 
     .profile_card .profile_content h3 {
         width: 80%;
-        color: grey;
         font-size: 13px;
         margin-top: 10px;
         padding: 4px 10px;
-        background: #F1FFAB;
         transform: translateX(-100%);
         transition: all 0.30s linear 0s;
-        border-radius: 5px;
+        border-radius: 5px
     }
 
     .profile_card .profile_content .social-link li a {
-        font-size:18px;
+        font-size: 18px;
         color: black;
         width: 25px;
         height: 25px;
         line-height: 25px;
         border-radius: 20px;
-        margin-top: 4%;
-
+        margin-top: 4%
     }
 
 }
-@media screen and (min-width: 320px) and (max-width:380px) {
+
+@media screen and (min-width:320px) and (max-width:380px) {
     .profile_card .profile_content h2 {
         font-size: 29px;
         padding: 10px;
         width: 80%;
-        color: black;
-        background: #FBD341;
         margin-top: 0;
         border-radius: 5px;
-        font-weight: bold;
+        font-weight: bold
     }
 
     .profile_card .profile_content h3 {
         width: 80%;
-        color: grey;
         font-size: 19px;
         margin-top: 10px;
         padding: 4px 10px;
-        background: #F1FFAB;
         transform: translateX(-100%);
         transition: all 0.30s linear 0s;
-        border-radius: 5px;
+        border-radius: 5px
     }
 
     .profile_card .profile_content .social-link li a {
@@ -251,33 +279,29 @@ body {
         height: 40px;
         line-height: 40px;
         border-radius: 30px;
-        margin-top: 7%;
-
+        margin-top: 7%
     }
 
 }
-@media screen and (min-width: 400px) and (max-width:450px) {
+
+@media screen and (min-width:400px) and (max-width:450px) {
     .profile_card .profile_content h2 {
         font-size: 29px;
         padding: 10px;
         width: 80%;
-        color: black;
-        background: #FBD341;
         margin-top: 0;
         border-radius: 5px;
-        font-weight: bold;
+        font-weight: bold
     }
 
     .profile_card .profile_content h3 {
         width: 80%;
-        color: grey;
         font-size: 25px;
         margin-top: 10px;
         padding: 4px 10px;
-        background: #F1FFAB;
         transform: translateX(-100%);
         transition: all 0.30s linear 0s;
-        border-radius: 5px;
+        border-radius: 5px
     }
 
     .profile_card .profile_content .social-link li a {
@@ -287,33 +311,29 @@ body {
         height: 50px;
         line-height: 50px;
         border-radius: 40px;
-        margin-top: 9%;
-
+        margin-top: 9%
     }
 
 }
-@media screen and (min-width: 480px) and (max-width:548px) {
+
+@media screen and (min-width:480px) and (max-width:548px) {
     .profile_card .profile_content h2 {
         font-size: 34px;
         padding: 10px;
         width: 80%;
-        color: black;
-        background: #FBD341;
         margin-top: 0;
         border-radius: 5px;
-        font-weight: bold;
+        font-weight: bold
     }
 
     .profile_card .profile_content h3 {
         width: 80%;
-        color: grey;
         font-size: 28px;
         margin-top: 10px;
         padding: 4px 10px;
-        background: #F1FFAB;
         transform: translateX(-100%);
         transition: all 0.30s linear 0s;
-        border-radius: 5px;
+        border-radius: 5px
     }
 
     .profile_card .profile_content .social-link li a {
@@ -323,33 +343,29 @@ body {
         height: 50px;
         line-height: 50px;
         border-radius: 40px;
-        margin-top: 12%;
-
+        margin-top: 12%
     }
 
 }
-@media screen and (min-width: 558px) and (max-width:748px) {
+
+@media screen and (min-width:558px) and (max-width:748px) {
     .profile_card .profile_content h2 {
         font-size: 40px;
         padding: 10px;
         width: 80%;
-        color: black;
-        background: #FBD341;
         margin-top: 0;
         border-radius: 5px;
-        font-weight: bold;
+        font-weight: bold
     }
 
     .profile_card .profile_content h3 {
         width: 80%;
-        color: grey;
         font-size: 33px;
         margin-top: 10px;
         padding: 4px 10px;
-        background: #F1FFAB;
         transform: translateX(-100%);
         transition: all 0.30s linear 0s;
-        border-radius: 5px;
+        border-radius: 5px
     }
 
     .profile_card .profile_content .social-link li a {
@@ -359,34 +375,29 @@ body {
         height: 55px;
         line-height: 55px;
         border-radius: 40px;
-        margin-top: 12%;
-
+        margin-top: 12%
     }
 
 }
 
-@media screen and (min-width: 760px) and (max-width:998px) {
+@media screen and (min-width:760px) and (max-width:998px) {
     .profile_card .profile_content h2 {
         font-size: 32px;
         padding: 10px;
         width: 80%;
-        color: black;
-        background: #FBD341;
         margin-top: 0;
         border-radius: 5px;
-        font-weight: bold;
+        font-weight: bold
     }
 
     .profile_card .profile_content h3 {
         width: 80%;
-        color: grey;
         font-size: 23px;
         margin-top: 10px;
         padding: 4px 10px;
-        background: #F1FFAB;
         transform: translateX(-100%);
         transition: all 0.30s linear 0s;
-        border-radius: 5px;
+        border-radius: 5px
     }
 
     .profile_card .profile_content .social-link li a {
@@ -396,33 +407,29 @@ body {
         height: 40px;
         line-height: 40px;
         border-radius: 30px;
-        margin-top: 10%;
-
+        margin-top: 10%
     }
 
 }
-@media screen and (min-width: 1100px) and (max-width:1300px) {
+
+@media screen and (min-width:1100px) and (max-width:1300px) {
     .profile_card .profile_content h2 {
         font-size: 26px;
         padding: 10px;
         width: 80%;
-        color: black;
-        background: #FBD341;
         margin-top: 0;
         border-radius: 5px;
-        font-weight: bold;
+        font-weight: bold
     }
 
     .profile_card .profile_content h3 {
         width: 80%;
-        color: grey;
         font-size: 18px;
         margin-top: 10px;
         padding: 4px 10px;
-        background: #F1FFAB;
         transform: translateX(-100%);
         transition: all 0.30s linear 0s;
-        border-radius: 5px;
+        border-radius: 5px
     }
 
     .profile_card .profile_content .social-link li a {
@@ -432,8 +439,7 @@ body {
         height: 30px;
         line-height: 30px;
         border-radius: 20px;
-        margin-top: 5%;
-
+        margin-top: 5%
     }
 
 }
