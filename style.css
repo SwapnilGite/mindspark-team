@@ -108,11 +108,15 @@
 }
 
 .profile_card  img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    padding: 22px;
-    margin-top: 35px
+    padding: 30px;
+    margin-top: 35px;
+
+    
 }
+
+
 
 .profile_card .profile_content {
     position: absolute;
@@ -123,10 +127,10 @@
 }
 
 .profile_card .profile_content h2 {
-    font-size: 30px;
+    font-size: 26px;
     padding: 10px;
     cursor: default;
-    width: 80%;
+    width: 90%;
     color: #cccccc;
     font-family: Perpetua;
     background: #1A2980;
@@ -213,7 +217,6 @@ body {
     background-size: cover;
 }
 
-
 @media screen and (min-width:220px) and (max-width:300px) {
     .scale-in-hor-center {
         font-size: 45px
@@ -252,7 +255,7 @@ body {
 
 @media screen and (min-width:320px) and (max-width:380px) {
     .profile_card .profile_content h2 {
-        font-size: 29px;
+        font-size: 26px;
         padding: 10px;
         width: 80%;
         margin-top: 0;
